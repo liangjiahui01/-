@@ -64,7 +64,6 @@ var __extends = (this && this.__extends) || (function () {
     // a[3] = false  //错误
     // a[1] =true   //错误
 }
-
 5.; //类类型  ***
 {
     var Clock = /** @class */ (function () {
@@ -79,4 +78,41 @@ var __extends = (this && this.__extends) || (function () {
     };
     // let c = new Clock('', [1], false)
     var c = createClock(Clock, '', [1], false);
+}
+6.; //继承接口
+{
+    var square = {};
+    // square.name =3  错误
+    square.color = 'red';
+    square.sideLength = 3;
+    var c = {};
+    c.k = false;
+    c.m = '';
+    c.n = 2;
+}
+7.; //接口继承类
+{
+    var C = /** @class */ (function () {
+        function C() {
+        }
+        return C;
+    }());
+    var D = /** @class */ (function () {
+        function D(name) {
+            this.name = name;
+        }
+        D.prototype.getName = function () {
+        };
+        return D;
+    }());
+    var B = /** @class */ (function (_super) {
+        __extends(B, _super);
+        function B() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        B.prototype.getName = function () {
+        };
+        return B;
+    }(C));
+    var b = new B();
 }
