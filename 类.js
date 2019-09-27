@@ -149,3 +149,20 @@ var __extends = (this && this.__extends) || (function () {
     var greeter2 = new greeterMaker();
     console.log(greeter2.greet());
 }
+6.; //接口继承类最后变成了接口... 见接口
+{
+    var A = /** @class */ (function () {
+        function A() {
+        }
+        return A;
+    }());
+    var b = {
+        name: 'Luke',
+        color: 'red',
+        location: 'xiamen'
+    };
+    var c = {
+        name: 'Luke',
+        color: 'red'
+    };
+}

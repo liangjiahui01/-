@@ -92,6 +92,7 @@
 
         }
 
+        protected abstract color: string
         constructor(protected name: string) {
 
         }
@@ -101,7 +102,7 @@
         getName() {
             console.log(this.name)
         }
-
+        public color: string
         constructor() {
             super('Luke')
         }
@@ -152,7 +153,7 @@
         color: 'red',
         location: 'xiamen'
     }
-    
+
     let c: B = {
         name: 'Luke',
         color: 'red'
